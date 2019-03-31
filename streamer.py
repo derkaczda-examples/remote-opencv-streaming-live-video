@@ -20,16 +20,16 @@ class Streamer (threading.Thread):
     self.isRunning = True
 
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    print 'Socket created'
+    print( 'Socket created')
 
     s.bind((self.hostname, self.port))
-    print 'Socket bind complete'
+    print('Socket bind complete')
 
     data = ""
     payload_size = struct.calcsize("L")
 
     s.listen(10)
-    print 'Socket now listening'
+    print('Socket now listening')
 
     while self.isRunning:
 
